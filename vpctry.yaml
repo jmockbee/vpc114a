@@ -52,3 +52,17 @@ Resources:
     Metadata:
       'AWS::CloudFormation::Designer':
         id: 8a779367-a4b9-4fc0-bda2-14f8a43d33fe
+          InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 8fa5f76c-6e45-4f61-8297-29d52da8e696
+  EC2VPCG16BJP:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref TodayVPC
+      InternetGatewayId: !Ref InternetGateway
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 42374457-d5a0-408d-a5dc-71cc2184cb1a
