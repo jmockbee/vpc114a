@@ -1,0 +1,39 @@
+# I am figuring this out from both designer and YAML template 
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    c87eb6c6-9dae-4607-965a-6c0a2e3b28b5:
+      size:
+        width: 620
+        height: 370
+      position:
+        x: 130
+        'y': 80
+      z: 0
+      embeds:
+        - f9bbe567-fc88-4ee3-8024-bfa37c3ce696
+    f9bbe567-fc88-4ee3-8024-bfa37c3ce696:
+      size:
+        width: 140
+        height: 89
+      position:
+        x: 137
+        'y': 211
+      z: 1
+      parent: c87eb6c6-9dae-4607-965a-6c0a2e3b28b5
+      iscontainedinside:
+        - c87eb6c6-9dae-4607-965a-6c0a2e3b28b5
+Resources:
+  TodayVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c87eb6c6-9dae-4607-965a-6c0a2e3b28b5
+  PublicSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref TodayVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: f9bbe567-fc88-4ee3-8024-bfa37c3ce696
