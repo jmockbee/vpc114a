@@ -37,3 +37,18 @@ Resources:
     Metadata:
       'AWS::CloudFormation::Designer':
         id: f9bbe567-fc88-4ee3-8024-bfa37c3ce696
+ WebServerInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      NetworkInterfaces:
+        - SubnetId: !Ref PublicSubnet
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: b08032bf-f4cf-461d-a9ae-7896292442cb
+  WebServerSecurtiyGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref TodayVPC
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 8a779367-a4b9-4fc0-bda2-14f8a43d33fe
